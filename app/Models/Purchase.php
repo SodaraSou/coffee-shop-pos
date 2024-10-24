@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Purchase extends Model
@@ -23,5 +24,10 @@ class Purchase extends Model
     public function ingredients(): HasMany
     {
         return $this->hasMany(Ingredient::class, 'purchase_id');
+    }
+
+    public function invoices(): BelongsToMany
+    {
+        return $this->belongsToMany(Invoice::class);
     }
 }

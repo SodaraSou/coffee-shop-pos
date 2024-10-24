@@ -31,4 +31,9 @@ class Invoice extends Model
             ->withPivot('discount', 'quantity')
             ->withTimestamps();
     }
+
+    public function purchases(): BelongsToMany
+    {
+        return $this->belongsToMany(Purchase::class);
+    }
 }
