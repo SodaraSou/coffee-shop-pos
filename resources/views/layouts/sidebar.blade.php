@@ -24,84 +24,44 @@
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-box"></i>
                         <p>
-                            Products
+                            Sales
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" id="product-index">
+                            <a href="{{ route('product.index') }}" class="nav-link" id="product-index">
                                 <i class="fas fa-angle-double-right nav-icon"></i>
                                 <p>Products List</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link" id="product-create">
+                            <a href="{{ route('product.create') }}" class="nav-link" id="product-create">
                                 <i class="fas fa-angle-double-right nav-icon"></i>
                                 <p>Create Product</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item" id="purchase">
+                <li class="nav-item" id="product">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-shopping-cart"></i>
+                        <i class="nav-icon fa fa-box"></i>
                         <p>
-                            Purchases
+                            Products
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('purchase.index') }}" class="nav-link" id="purchase-index">
+                            <a href="{{ route('product.index') }}" class="nav-link" id="product-index">
                                 <i class="fas fa-angle-double-right nav-icon"></i>
-                                <p>Purchases List</p>
+                                <p>Products List</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('purchase.create') }}" class="nav-link" id="purchase-create">
+                            <a href="{{ route('product.create') }}" class="nav-link" id="product-create">
                                 <i class="fas fa-angle-double-right nav-icon"></i>
-                                <p>Create Purchases</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item" id="ingredient">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-cubes"></i>
-                        <p>
-                            Ingredients
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" id="ingredient-index">
-                                <i class="fas fa-angle-double-right nav-icon"></i>
-                                <p>Ingredients List</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" id="ingredient-create">
-                                <i class="fas fa-angle-double-right nav-icon"></i>
-                                <p>Create ingredient</p>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item" id="invoice">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-file-invoice-dollar"></i>
-                        <p>
-                            Invoices
-                            <i class="right fas fa-angle-left"></i>
-                        </p>
-                    </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="{{ route('invoice.index') }}" class="nav-link" id="invoice-index">
-                                <i class="fas fa-angle-double-right nav-icon"></i>
-                                <p>Invoices List</p>
+                                <p>Create Product</p>
                             </a>
                         </li>
                     </ul>
