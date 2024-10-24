@@ -27,6 +27,11 @@ class User extends Authenticatable
         'gender',
     ];
 
+    protected $attributes = [
+        'role' => '',
+        'gender' => ''
+    ];
+
     /**
      * The attributes that should be hidden for serialization.
      *
