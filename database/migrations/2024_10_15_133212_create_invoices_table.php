@@ -9,7 +9,7 @@ return new class extends Migration {
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
-            $table->integer('total_price');
+            $table->decimal('total_price');
             $table->integer('discount');
             $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
