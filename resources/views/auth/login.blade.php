@@ -66,6 +66,7 @@
                         <!-- /.col -->
                     </div>
                 </form>
+                <a href="{{ route('register') }}" class="text-center mt-2 d-block">I don't have an account</a>
             </div>
             <!-- /.card-body -->
         </div>

@@ -96,7 +96,7 @@
                         <!-- /.col -->
                     </div>
                 </form>
-                <a href="{{ route('login') }}" class="text-center mt-2 d-block">I already have a membership</a>
+                <a href="{{ route('login') }}" class="text-center mt-2 d-block">I already have an account</a>
             </div>
             <!-- /.card-body -->
         </div>
