@@ -22,7 +22,7 @@
                 </li>
                 <li class="nav-item" id="product">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-box"></i>
+                        <i class="nav-icon fa fa-store"></i>
                         <p>
                             Sales
                             <i class="right fas fa-angle-left"></i>

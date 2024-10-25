@@ -13,6 +13,8 @@ class ProductController extends Controller
         return Inertia::render('product/index', ['products' => Product::all()]);
     }
 
+    public function show() {}
+
     public function create()
     {
         return Inertia::render('product/create');
@@ -45,5 +47,10 @@ class ProductController extends Controller
             'quantity' => $request->quantity,
         ]);
         return redirect()->route('product.index');
+    }
+
+    public function destroy(Product $product)
+    {
+        $product->delete();
     }
 }

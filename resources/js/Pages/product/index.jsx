@@ -1,6 +1,30 @@
-import React from "react";
+import { router } from "@inertiajs/react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
+const MySwal = withReactContent(Swal);
 
 export default function Index({ products }) {
+    const handleDelete = (productId) => {
+        MySwal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, delete it!",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                router.delete(`/product/${productId}`);
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Product has been deleted.",
+                    icon: "success",
+                });
+            }
+        });
+    };
     return (
         <div className="card card-primary">
             <div className="card-header">
@@ -38,7 +62,25 @@ export default function Index({ products }) {
                                     <td>{product.sell_price}</td>
                                     <td>{product.cost_price}</td>
                                     <td>{product.quantity}</td>
-                                    <td></td>
+                                    <td>
+                                        <div>
+                                            <a
+                                                href={`/product/${product.id}/edit`}
+                                                className="btn btn-sm btn-primary"
+                                            >
+                                                Edit
+                                            </a>
+                                            <button
+                                                onClick={() =>
+                                                    handleDelete(product.id)
+                                                }
+                                                className="btn btn-sm btn-danger"
+                                                type="button"
+                                            >
+                                                Delete
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                             ))}
                     </tbody>
