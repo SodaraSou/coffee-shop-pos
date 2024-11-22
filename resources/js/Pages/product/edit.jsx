@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { router } from "@inertiajs/react";
+
 export default function Edit({ product }) {
     const [productToEdit, setProductToEdit] = useState({
         name: product.name,

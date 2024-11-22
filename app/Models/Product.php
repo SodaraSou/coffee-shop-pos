@@ -10,7 +10,6 @@ class Product extends Model
 {
     protected $fillable = [
         'name',
-        'price',
         'sell_price',
         'cost_price',
         'quantity',
@@ -21,10 +20,10 @@ class Product extends Model
         return $this->hasMany(Order::class, 'product_id');
     }
 
-    public function productPreSales(): HasMany
+    /* public function productPreSales(): HasMany
     {
         return $this->hasMany(ProductPreSale::class, 'product_id');
-    }
+    } */
 
     public function invoices(): BelongsToMany
     {

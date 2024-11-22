@@ -4,7 +4,7 @@ import withReactContent from "sweetalert2-react-content";
 
 const MySwal = withReactContent(Swal);
 
-export default function InvoiceTable({ invoices }) {
+export default function PurchaseTable({ invoices }) {
     const handleDelete = (invoiceId) => {
         MySwal.fire({
             title: "Are you sure?",
@@ -16,11 +16,22 @@ export default function InvoiceTable({ invoices }) {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                router.delete(`/invoice/${invoiceId}`);
-                Swal.fire({
-                    title: "Deleted!",
-                    text: "Invoice has been deleted.",
-                    icon: "success",
+                // Send DELETE request using Inertia.js to delete the invoice
+                router.delete(`/purchase/${invoiceId}`, {
+                    onSuccess: () => {
+                        Swal.fire({
+                            title: "Deleted!",
+                            text: "Invoice has been deleted.",
+                            icon: "success",
+                        });
+                    },
+                    onError: () => {
+                        Swal.fire({
+                            title: "Error!",
+                            text: "There was an error deleting the invoice.",
+                            icon: "error",
+                        });
+                    },
                 });
             }
         });
@@ -47,8 +58,8 @@ export default function InvoiceTable({ invoices }) {
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Total Price</th>
-                            <th>Discount</th>
+                            <th>Total Pay</th>
+                            <th>Spend Money</th>
                             <th>User ID</th>
                             <th>Action</th>
                         </tr>
@@ -58,13 +69,13 @@ export default function InvoiceTable({ invoices }) {
                             invoices.map((invoice, index) => (
                                 <tr key={index}>
                                     <td>{invoice.id}</td>
-                                    <td>${invoice.total_price}</td>
-                                    <td>{invoice.discount}%</td>
+                                    <td>${invoice.total_pay}</td>
+                                    <td>${invoice.spend_money}</td>
                                     <td>{invoice.user_id}</td>
                                     <td>
                                         <div>
                                             <a
-                                                href={`/invoice/${invoice.id}/edit`}
+                                                href={`/purchase/${invoice.id}/edit`}
                                                 className="btn btn-sm btn-primary"
                                             >
                                                 Detail

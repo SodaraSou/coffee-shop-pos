@@ -1,0 +1,24 @@
+{
+    "product": [
+        {
+            "product_id": "1",
+            "product_image": "images/product/01.jpeg"
+        },
+        {
+            "product_id": "2",
+            "product_image": "images/product/02.jpeg"
+        },
+        {
+            "product_id": "3",
+            "product_image": "images/product/03.jpg"
+        },
+        {
+            "product_id": "4",
+            "product_image": "images/product/04.jpeg"
+        },
+        {
+            "product_id": "5",
+            "product_image": "images/product/05.jpeg"
+        }
+    ]
+}

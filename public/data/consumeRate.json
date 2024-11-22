@@ -1,0 +1,44 @@
+{
+    "coffee": [
+        {
+            "product_id": "1",
+            "product_image": "images/product/01.jpeg",
+            "milk": "250",
+            "coffee": "30",
+            "glass": "1",
+            "water": "50"
+        },
+        {
+            "product_id": "2",
+            "product_image": "images/product/02.jpeg",
+            "milk": "250",
+            "coffee": "30",
+            "glass": "1",
+            "water": "50"
+        },
+        {
+            "product_id": "3",
+            "product_image": "images/product/03.jpg",
+            "milk": "0",
+            "coffee": "30",
+            "glass": "1",
+            "water": "50"
+        },
+        {
+            "product_id": "4",
+            "product_image": "images/product/04.jpeg",
+            "milk": "0",
+            "coffee": "30",
+            "glass": "1",
+            "water": "50"
+        },
+        {
+            "product_id": "5",
+            "product_image": "images/product/05.jpeg",
+            "milk": "500",
+            "coffee": "30",
+            "glass": "1",
+            "water": "50"
+        }
+    ]
+}

@@ -14,13 +14,12 @@
                 data-accordion="false" id="sidebar">
                 <li class="nav-item">
                     <a href="{{ route('home') }}" class="nav-link" id="dashboard">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
                         </p>
                     </a>
                 </li>
-                <li class="nav-item" id="product">
+                <li class="nav-item" id="invoice">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fa fa-store"></i>
                         <p>
@@ -30,15 +29,38 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="{{ route('product.index') }}" class="nav-link" id="product-index">
+                            <a href="{{ route('invoice.index') }}" class="nav-link" id="invoice-index">
                                 <i class="fas fa-angle-double-right nav-icon"></i>
-                                <p>Products List</p>
+                                <p>Sales List</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('product.create') }}" class="nav-link" id="product-create">
+                            <a href="{{ route('invoice.create') }}" class="nav-link" id="invoice-create">
                                 <i class="fas fa-angle-double-right nav-icon"></i>
-                                <p>Create Product</p>
+                                <p>Create Sale</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item" id="purchase">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fa fa-receipt"></i>
+                        <p>
+                            Purchases
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="{{ route('purchase.index') }}" class="nav-link" id="purchase-index">
+                                <i class="fas fa-angle-double-right nav-icon"></i>
+                                <p>Purchases List</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('purchase.create') }}" class="nav-link" id="purchase-create">
+                                <i class="fas fa-angle-double-right nav-icon"></i>
+                                <p>Create Purchase</p>
                             </a>
                         </li>
                     </ul>
@@ -66,27 +88,27 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item" id="receipt">
+                <li class="nav-item" id="report">
                     <a href="#" class="nav-link">
-                        <i class="nav-icon fa fa-receipt"></i>
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Receipts
+                            Reports
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" id="receipt-index">
+                            <a href="{{ route('report.index') }}" class="nav-link" id="report-index">
                                 <i class="fas fa-angle-double-right nav-icon"></i>
-                                <p>Receipts List</p>
+                                <p>Reports Sales</p>
                             </a>
                         </li>
                     </ul>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link" id="receipt-index">
+                            <a href="{{ route('stock.index') }}" class="nav-link" id="report-stock">
                                 <i class="fas fa-angle-double-right nav-icon"></i>
-                                <p>Create Receipt</p>
+                                <p>Reports Stock</p>
                             </a>
                         </li>
                     </ul>

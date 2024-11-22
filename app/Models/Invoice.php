@@ -32,8 +32,8 @@ class Invoice extends Model
             ->withTimestamps();
     }
 
-    public function purchases(): BelongsToMany
+    /* public function purchases(): BelongsToMany
     {
         return $this->belongsToMany(Purchase::class);
-    }
+    } */
 }

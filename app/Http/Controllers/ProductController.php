@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Invoice;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -13,7 +14,9 @@ class ProductController extends Controller
         return Inertia::render('product/index', ['products' => Product::all()]);
     }
 
-    public function show() {}
+    public function show()
+    {
+    }
 
     public function create()
     {
@@ -24,7 +27,6 @@ class ProductController extends Controller
     {
         Product::create([
             'name' => $request->name,
-            'price' => $request->sell_price,
             'sell_price' => $request->sell_price,
             'cost_price' => $request->cost_price,
             'quantity' => $request->quantity,
@@ -41,7 +43,6 @@ class ProductController extends Controller
     {
         $product->update([
             'name' => $request->name,
-            'price' => $request->sell_price,
             'sell_price' => $request->sell_price,
             'cost_price' => $request->cost_price,
             'quantity' => $request->quantity,

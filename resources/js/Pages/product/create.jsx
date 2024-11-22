@@ -16,6 +16,7 @@ export default function Create() {
             [key]: value,
         }));
     }
+
     function handleSubmit(e) {
         e.preventDefault();
         router.post("/product", product);
